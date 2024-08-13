@@ -1,5 +1,4 @@
-# sincnet
-Sparse INterval-Censored Neural Networks
+# SincNet: Sparse Interval-Censored Neural Network
 
 1. Orientative limits for the lambda grid are set based on a preliminary whole path run.
 2. One path is created for each subsampling draw.
