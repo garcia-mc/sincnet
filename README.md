@@ -5,7 +5,7 @@
 1. Orientative limits for the lambda grid are set based on a preliminary whole path run.
 2. One path is created for each subsampling draw.
 3. Average the paths.
-4. For each $\frac{q_{\lambda}}{p}$, go backward across the averaged paths and stop at the first $\lambda$ that lets $\frac{q_{\lambda}}{p}$ enter in the model. Register the proportion of times each variable has been selected for that $\lambda$: $\pi^{\lambda}_{1}, …, \pi^{\lambda}_{p}$.
+4. For each $\frac{q_{\lambda}}{p}$, go backward across the averaged paths and stop at the first $\lambda$ that lets $\frac{q_{\lambda}}{p}$ enter in the model. Register the proportion of times each variable has been selected for that $\lambda$: $\pi^{\lambda}\_{1}, …, \pi^{\lambda}\_{p}$.
 5. Plot $\pi^{\lambda}\_{1}, …, \pi^{\lambda}\_{p}$ against $\frac{q_{\lambda}}{p}$.
 
 This follows the indication of the original stability selection paper:
