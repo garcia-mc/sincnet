@@ -45,3 +45,7 @@ See `main.py` for an example of how to run the stability selection algorithm.
 
 - `generate.py`: Generate the data.
 - `main.py`: Run the stability selection algorithm.
+
+## Reference
+
+TODO
