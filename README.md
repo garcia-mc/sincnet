@@ -1,4 +1,4 @@
-# SincNet: Sparse Interval-Censored Neural Networks
+# SpiNet: Sparse Interval-Censored Neural Networks
 
 ![Stability selection](output.png)
 
