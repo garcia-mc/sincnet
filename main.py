@@ -15,19 +15,21 @@ p = 100
 X, y = generate(n, p)
 
 
-def make_path(lambda_seq=None):
-    model = LassoNetIntervalRegressor(hidden_dims=(10, 10))
+# TODO: refactor and integrate stability selection into LassoNet
+def make_path(model, X, y, lambda_seq=None):
+    n = len(X)
     shuffle = list(range(n))
     random.shuffle(shuffle)
     train_ind = shuffle[n // 2 : n]
     return model.path(X[train_ind], y[train_ind], lambda_seq=lambda_seq)
 
 
+model = LassoNetIntervalRegressor(hidden_dims=(10, 10))
 n_models = 20
 
-path = make_path()
+path = make_path(model, X, y)
 lambda_seq = [it.lambda_ for it in path]
-paths = [make_path(lambda_seq) for _ in tqdm(range(n_models))]
+paths = [make_path(model, X, y, lambda_seq) for _ in tqdm(range(n_models))]
 
 
 prob = selection_probability(paths)
