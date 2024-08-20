@@ -8,7 +8,6 @@ from tqdm import tqdm
 
 from generate import generate
 
-
 # Number of individuals to be simulated
 n = 2000
 # Number of variables
@@ -38,10 +37,11 @@ def pi_thr(x, F):
     return np.minimum(1, 0.5 * ((1 - x) ** 2 / F + 1))
 
 
+plt.figure(dpi=300)
 plt.xlabel("Average proportion of removed variables")
 plt.ylabel("Selection probability")
 plt.plot([1 - s.mean() for s in prob], prob)
 thresholds = np.linspace(0, 1, 100)
-for F in [0.1, 0.2, 0.3]:
-    plt.plot(thresholds, pi_thr(thresholds, F), "k--", label=f"F={F}")
+for F in [0.01, 0.05, 0.1]:
+    plt.plot(thresholds, pi_thr(thresholds, F), "k--", label=f"F = {F:.0%}")
 plt.legend()
