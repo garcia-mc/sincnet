@@ -34,7 +34,7 @@ paths = [make_path(lambda_seq) for _ in tqdm(range(n_models))]
 prob = selection_probability(paths)
 
 
-def curve_family(x, F):
+def pi_thr(x, F):
     return np.minimum(1, 0.5 * ((1 - x) ** 2 / F + 1))
 
 
@@ -43,5 +43,5 @@ plt.ylabel("Selection probability")
 plt.plot([1 - s.mean() for s in prob], prob)
 thresholds = np.linspace(0, 1, 100)
 for F in [0.1, 0.2, 0.3]:
-    plt.plot(thresholds, curve_family(thresholds, F), "k--", label=f"F={F}")
+    plt.plot(thresholds, pi_thr(thresholds, F), "k--", label=f"F={F}")
 plt.legend()
