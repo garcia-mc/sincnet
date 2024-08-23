@@ -16,7 +16,7 @@
 	
 This approach follows the guidance provided in the original stability selection paper, which states:
  
-> ``To do this, we need knowledge about $q_{\Lambda}$. This can be easily achieved by regularization of the selection procedure $\hat{S}=\hat{S}^q$ in terms of the number of selected variables $q$, i.e., the domain $\Lambda$ for the regularization parameter $\lambda$ determines the number $q$ of selected variables, i.e., $q=q(\Lambda)$. For example, with $l_1$-norm penalization, the number $q$ is given by the variables which enter first in the regularization path when varying from a maximal value $\lambda_{\max }$ to some minimal value $\lambda_{\min }$. Mathematically, $\lambda_{\min }$ is such that $\left|\cup_{\lambda_{\max }\geq \lambda \geq \lambda_{\min } }\hat{S}^\lambda\right| \leq q$.''
+> To do this, we need knowledge about $q_{\Lambda}$. This can be easily achieved by regularization of the selection procedure $\hat{S}=\hat{S}^q$ in terms of the number of selected variables $q$, i.e., the domain $\Lambda$ for the regularization parameter $\lambda$ determines the number $q$ of selected variables, i.e., $q=q(\Lambda)$. For example, with $l_1$-norm penalization, the number $q$ is given by the variables which enter first in the regularization path when varying from a maximal value $\lambda_{\max }$ to some minimal value $\lambda_{\min }$. Mathematically, $\lambda_{\min }$ is such that $\left|\cup_{\lambda_{\max }\geq \lambda \geq \lambda_{\min } }\hat{S}^\lambda\right| \leq q$.
 
 **Note:**: Recall the bound for the expected number of falsely selected variables under the assumptions in Theorem 1:
 	
