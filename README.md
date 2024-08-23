@@ -11,7 +11,7 @@
    - We ensure that the selection probability for each variable is monotonically decreasing as we progress through the lambda values.
    - At each step, we take the element-wise minimum between the current selected and the new average selection probability.
    - The outcome is that the selection probability curves for each variable will be monotonically decreasing across the lambda values.
-4. Subsequently, we plot $(\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p})$ against $\frac{q_{\lambda}}{p}$.
+4. Subsequently, we plot $ (\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p}) $ against $\frac{q_{\lambda}}{p}$.
 
 	
 This approach follows the guidance provided in the original stability selection paper, which states:
@@ -28,7 +28,7 @@ $$\frac{E(V)}{p} \leq \frac{1}{2 \pi_{\mathrm{thr}}-1} \frac{q_{\Lambda}^2}{p^2}
 	
  Let us define $x:=\frac{q_{\lambda}}{p}$. Then, for each bound $F$ on the expected proportion of falsely selected variables $\frac{E(V)}{p}$, we derive a family of curves indexed by $F$: 
  
- $$\pi_{thr}(x)=\frac{1}{2}\left(\frac{x^2}{F} + 1\right).$$ 
+ $$\pi_{thr}(x)=\frac{1}{2}\left(\frac{x^2}{F} + 1\right)$$ 
  
  Finally, we can add these curves to the $(\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p})$ against $\frac{q_{\lambda}}{p}$ plot to identify which variables would be selected upon fixing the false discovery rate upper bound $F$ we are willing to accept, see Figure. 
 	
@@ -51,6 +51,9 @@ See `main.py` for an example of how to run the stability selection algorithm.
 - `generate.py`: Generate the data.
 - `main.py`: Run the stability selection algorithm.
 
-## Reference
+## References
 
-TODO
+Meixide, C. G., Matabuena, M., Abraham, L., & Kosorok, M. R. (2024). Neural interval‐censored survival regression with feature selection. *Statistical Analysis and Data Mining: The ASA Data Science Journal*, 17(4), e11704.
+
+
+
