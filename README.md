@@ -3,11 +3,17 @@
 ![Stability selection](output.png)
 
  Our implementation allows users to effectively explore the relationship between the proportion of selected variables ($q_\lambda/p$) and the selection frequency of each feature $j$ ($\pi^\lambda_j$) with interval-censored targets, while also providing a graphical framework for controlling the expected number of falsely selected variables.
-	1. Orientative limits for the lambda grid are set based on a preliminary whole path run.
- 	2. For each subsampling draw, a distinct path is created. 
-  	3. We iterate through the selection states of all paths at each lambda value. During each iteration, the average selection probability for each variable is calculated across all models. Importantly, we ensure that the selection probability for each variable is monotonically decreasing as we progress through the lambda values. At each step, we take the element-wise minimum between the current selected and the new average selection probability. The outcome of this process is that the selection probability curves for each variable will be monotonically decreasing across the lambda values. 
-   	4. Subsequently, we plot $(\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p})$ against $\frac{q_{\lambda}}{p}$.
 
+1. Orientative limits for the lambda grid are set based on a preliminary whole path run.
+2. For each subsampling draw, a distinct path is created.
+3. We iterate through the selection states of all paths at each lambda value. During each iteration:
+   - The average selection probability for each variable is calculated across all models.
+   - We ensure that the selection probability for each variable is monotonically decreasing as we progress through the lambda values.
+   - At each step, we take the element-wise minimum between the current selected and the new average selection probability.
+   - The outcome is that the selection probability curves for each variable will be monotonically decreasing across the lambda values.
+4. Subsequently, we plot $(\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p})$ against $\frac{q_{\lambda}}{p}$.
+
+	
 This approach follows the guidance provided in the original stability selection paper, which states:
  
 > ``To do this, we need knowledge about $q_{\Lambda}$. This can be easily achieved by regularization of the selection procedure $\hat{S}=\hat{S}^q$ in terms of the number of selected variables $q$, i.e., the domain $\Lambda$ for the regularization parameter $\lambda$ determines the number $q$ of selected variables, i.e., $q=q(\Lambda)$. For example, with $l_1$-norm penalization, the number $q$ is given by the variables which enter first in the regularization path when varying from a maximal value $\lambda_{\max }$ to some minimal value $\lambda_{\min }$. Mathematically, $\lambda_{\min }$ is such that $\left|\cup_{\lambda_{\max }\geq \lambda \geq \lambda_{\min } }\hat{S}^\lambda\right| \leq q$.''
