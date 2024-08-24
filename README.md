@@ -11,7 +11,7 @@
    - We ensure that the selection probability for each variable is monotonically decreasing as we progress through the lambda values.
    - At each step, we take the element-wise minimum between the current selected and the new average selection probability.
    - The outcome is that the selection probability curves for each variable will be monotonically decreasing across the lambda values.
-4. Subsequently, we plot $(\pi^{\lambda}_{1}, ..., \pi^{\lambda}_{p})$ against $\frac{q_{\lambda}}{p}$.
+4. Subsequently, we plot $\pi^{\lambda}_{1}, ..., \pi^{\lambda}_{p}$ against $\frac{q_{\lambda}}{p}$.
 
 	
 This approach follows the guidance provided in the original stability selection paper, which states:
@@ -30,7 +30,7 @@ $$\frac{E(V)}{p} \leq \frac{1}{2 \pi_{\mathrm{thr}}-1} \frac{q_{\Lambda}^2}{p^2}
  
  $$\pi_{thr}(x)=\frac{1}{2}\left(\frac{x^2}{F} + 1\right)$$ 
  
- Finally, we can add these curves to the $(\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p})$ against $\frac{q_{\lambda}}{p}$ plot to identify which variables would be selected upon fixing the false discovery rate upper bound $F$ we are willing to accept, see Figure. 
+ Finally, we can add these curves to the $\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p}$ against $\frac{q_{\lambda}}{p}$ plot to identify which variables would be selected upon fixing the false discovery rate upper bound $F$ we are willing to accept, see Figure. 
 	
 ![Stability selection](output.png)
 
