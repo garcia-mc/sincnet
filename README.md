@@ -30,7 +30,7 @@ $$\frac{E(V)}{p} \leq \frac{1}{2 \pi_{\mathrm{thr}}-1} \frac{q_{\Lambda}^2}{p^2}
  
  $$\pi_{thr}(x)=\frac{1}{2}\left(\frac{x^2}{F} + 1\right)$$ 
  
- Finally, we can add these curves to the $\pi^{\lambda}_{1}, \ldots, \pi^{\lambda}_{p}$ against $\frac{q_{\lambda}}{p}$ plot to identify which variables would be selected upon fixing the false discovery rate upper bound $F$ we are willing to accept, see Figure. 
+ Finally, we can add these curves to the $\pi^{\lambda}_{1}, ..., \pi^{\lambda}_{p}$ against $\frac{q_{\lambda}}{p}$ plot to identify which variables would be selected upon fixing the false discovery rate upper bound $F$ we are willing to accept, see Figure. 
 	
 ![Stability selection](output.png)
 
