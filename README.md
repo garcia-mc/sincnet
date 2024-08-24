@@ -11,7 +11,7 @@
    - We ensure that the selection probability for each variable is monotonically decreasing as we progress through the lambda values.
    - At each step, we take the element-wise minimum between the current selected and the new average selection probability.
    - The outcome is that the selection probability curves for each variable will be monotonically decreasing across the lambda values.
-4. Subsequently, we plot $\pi^{\lambda}_{1}, ..., \pi^{\lambda}_{p}$ against $\frac{q_{\lambda}}{p}$.
+4. Subsequently, we plot $\pi^\lambda_{1}, ..., \pi^{\lambda}_{p}$ against $\frac{q_{\lambda}}{p}$.
 
 	
 This approach follows the guidance provided in the original stability selection paper, which states:
