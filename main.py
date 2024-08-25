@@ -60,7 +60,7 @@ features1 = order1[:oracle1]
 print("Features selected by stability selection =", features1)
 
 # fit dense model on selected features
-model.fit(X2[:, features1], y2, dense=True)
+model.fit(X2[:, features1], y2, dense_only=True)
 
 print("C-index for sample-splitting =", model.score(X3[:, features1], y3))
 
@@ -71,7 +71,7 @@ model = LassoNetIntervalRegressor(hidden_dims=(10, 10))
 oracle12, order12, *_ = model.stability_selection(X12, y12, n_models=20)
 features12 = order12[:oracle12]
 print("Features selected by stability selection =", features12)
-model.fit(X12[:, features12], y12, dense=True)
+model.fit(X12[:, features12], y12, dense_only=True)
 print("C-index without sample-splitting =", model.score(X3[:, features12], y3))
 
 
