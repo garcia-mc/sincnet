@@ -57,9 +57,7 @@ def nonlin_gen(mean_vector, sigma):
         if latent_time_v[i] < latent_time_u[i]:
             latent_time_u[i], latent_time_v[i] = latent_time_v[i], latent_time_u[i]
 
-    return np.column_stack(
-        (latent_time_u, latent_time_v, delta_1, delta_2, delta_3, latent_times)
-    )
+    return np.column_stack((latent_time_u, latent_time_v, delta_1, delta_2, delta_3))
 
 
 def generate(n, p):
